@@ -1,28 +1,25 @@
 <!--NavBar-->
 <div class="wrapper">
-  <header>
-     <nav class="topnav" id="myTopnav">
-       <div class="menu-icon" >
-      </div>
+     <nav>
+        <div class="menu-icon">
+            <i class="fa fa-bars fa-2x"></i>
+         </div>
       <div class="logo">
-          <img src="assets/logo/cortenome_branco_sem_fundo.png" style="height: 18px;">
+          <a routerLink="/"><img src="assets/logo/cortenome_branco_sem_fundo.png" style="height: 18px;"></a>
           
         </div>
         <div class="menu">
            <ul>
-              <li><a routerLink="/">Home</a></li>
+              <li><a routerLink="">Home</a></li>
               <li><a routerLink="">Quem Somos</a></li>
               <li><a routerLink="contato">Contato</a></li>
               <li><a routerLink="">Depoimentos</a></li>
               <li><a routerLink="">Documentação UML</a></li>
-              <li><a routerLink="">Orçamento</a></li>
-              <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars"></i>
-                </a></li>
+              <li><a routerLink="form">Orçamento</a></li>
            </ul>
         </div>
      </nav>
-  </header>
+
 </div>
 
 <router-outlet></router-outlet>
@@ -32,7 +29,7 @@
   <div class="container-fluid">
     <div class="row row-30">
       <div class="col-md-3">
-        <img src="assets/logo/completa_branca_sem_fundo.png" style="width:300px; margin-top: 10px; margin-bottom: 10px; margin-right: 55px; padding: 5%;">
+        <img class="logof" src="assets/logo/completa_branca_sem_fundo.png" >
       </div>
       <div class="col-md-3">
         <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="130" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
@@ -53,7 +50,7 @@
         </dl>
         <dl class="contact-list">
           <dt>Phones:</dt>
-          <dd><a href="tel:#">+91 7568543012</a> <span>or</span> <a href="tel:#">+91 9571195353</a>
+          <dd><a href="tel:#">+91 7568543012</a> <span> or </span> <a href="tel:#">+91 9571195353</a>
           </dd>
         </dl>
       </div>

@@ -25,11 +25,14 @@
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome-4.7.0/css/font-awesome.min.css",
               "src/styles.css"
             ],
             "scripts": [
               "./node_modules/jquery-slim/dist/jquery.slim.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/zn-menubar/jquery-3.3.1.js",
+              "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/zn-menubar/zn-menubar.js"
             ]
           },
