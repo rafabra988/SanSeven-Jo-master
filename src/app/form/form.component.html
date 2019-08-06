@@ -1,55 +1,49 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-    <head>
-        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-    </head>
-    <body>
-        <div>
-    <form>
-        <div>
-            <label>Seu nome</label>
-            <input type="text" name="nome">
-            <div>
+<header></header>
+<h2>Solicite seu orçamento</h2>
+<div class="rafael">
+    <form class="formu">
+        <!--Div relacionada ao campo nome-->
+        <div class="divi" >
+            <input placeholder="Nome" type="text" name="nome" class="caixa">
+            <!--<div>
                 <small>Este campo é obrigatório</small>
                 <small>O nome precisa ter mais de 4 caracteres</small>
                 <small>O nome precisa ter menos de 30 caracteres</small>
-                <small>Pattern</small>
             </div>
-            <small> ✔️ </small>
+            <small> ✔️ </small>-->
         </div>
-        <div>
-            <label>Seu e-mail:</label>
-            <input type="email" name="email">
-            <div>
+        <!--Div relacionada ao campo email-->
+        <div class="divi">
+            <input placeholder="email@email.com" type="email" name="email" class="caixa">
+            <!--<div>
                 <small>Este campo é obrigatório</small>
                 <small>Email inválido</small>
             </div>
-            <small> ✔️ </small>
+            <small> ✔️ </small>-->
         </div>
-        <div>
-            <label>Selecione o serviço desejado:</label>
-            <select name="servico">
-                <option value="" selected style="display:none">Selecione uma opção..</option>
+        <!--Div relacionada ao campo serviço-->
+        <div class="divi">
+            <select name="servico" class="caixa">
+                <option  value="" selected style="display:none">Serviços</option>
                 <option>{{s}}</option>
             </select>
-            <div>
+            <!--<div>
                 <small>Este campo é obrigatório</small>
             </div>
-            <small> ✔️ </small>
+            <small> ✔️ </small>-->
         </div>
-        <div>
-            <label>Descrição:</label>
-            <textarea maxlength="250" name="descricao" rows="3"></textarea>
-            <div>
+        <!--Div relacionada ao campo descrição-->
+        <div class="divi">
+            <textarea placeholder="Descrição da sua solicitação" class="caixa" maxlength="250" name="descricao" rows="3"></textarea>
+            <!--<div>
                 <small>Este campo é obrigatório</small>
             </div>
-            <small> ✔️ </small>
+            <small> ✔️ </small>-->
         </div>
+        <!--Div relacionada ao campo botão-->
         <div>
-            <button type="submit">Enviar</button>
+            <button class="btn botao" >Enviar</button>
         </div>
     </form>
 </div>
-</body>
-</html>
+
