@@ -75,10 +75,11 @@ nav ul {
     margin: 0;
     padding-right: 40px;
     transition: 1s;
+    border: none;
 }
 
 nav.black ul {
-    background: #000;
+    background: rgba(0, 49, 122, 0.94);
 }
 
 nav ul li {
@@ -90,6 +91,7 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
+    
 }
 
 .menu-icon {
