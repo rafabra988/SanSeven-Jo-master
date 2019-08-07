@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContatoComponent } from './contato/contato.component';
 import { FormComponent } from './form/form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormModule } from './form/form.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContatoComponent,
-    FormComponent
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

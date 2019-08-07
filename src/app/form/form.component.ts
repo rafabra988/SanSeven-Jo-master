@@ -1,31 +1,56 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators, NgModel } from '@angular/forms';
+import { MessageService } from './services/message.service';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
-  
-  servicos = ['Serviços', 'Vão', 'Aqui', 'Dentro'];
-  formulario:FormGroup;
-  constructor(private formBilder:FormBuilder) { }
 
-  ngOnInit():void {
-    this.configForm();
-  }
+export class FormComponent {
 
-  configForm(){
-    this.formulario = this.formBilder.group({
-      nome:['', [Validators.required, Validators.maxLength(30), Validators.minLength(4)]],
-      email:['', [Validators.required, Validators.email]],
-      cxMsg:['', Validators.required]
-    })
-  }
+  constructor(public _MessageService: MessageService) { };
 
-  criar(){
-    
-  }
-  //Criar máscara para o formulário.
+  formOrcamento = new FormGroup({
+    nome: new FormControl('', Validators.compose([
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(30),
+      Validators.pattern['a-zA-Z\u00C0-\u00FF ']
+
+    ])),
+    email: new FormControl('', Validators.compose([
+      Validators.required,
+      Validators.email
+
+    ])),
+    servico: new FormControl('', Validators.compose([
+      Validators.required
+
+    ])),
+    descricao: new FormControl('', Validators.compose([
+      Validators.required,
+      Validators.max(250),
+      Validators.min(10)
+    ]))
+  }, {updateOn: 'blur'});
+
+  get nome() { return this.formOrcamento.get('nome') };
+  get email() { return this.formOrcamento.get('email') };
+  get servico() { return this.formOrcamento.get('servico') };
+  get descricao() { return this.formOrcamento.get('descricao') };
+
+  servicos = ['Design', 'Desenvolvimento de Sites', 'Service Desk', 'Instalação e Configuração de REDES','Criação e Configuração de Servidores Web','Configuração dos Roteadores da NET'];
+
+  contactForm() {
+    this._MessageService.sendMessage(this.formOrcamento.getRawValue()).subscribe(() => {
+      alert("Sua solicitação de orçamento foi enviada com sucesso!");
+      this.formOrcamento.reset();
+    });
+  };
+
+  testar() {
+    console.log(this.formOrcamento.value.nome);
+  };
 }

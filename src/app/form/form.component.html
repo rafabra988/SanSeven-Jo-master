@@ -1,54 +1,50 @@
 <header></header>
 <h2>Solicite seu orçamento</h2>
 <div class="rafael">
-    <form class="formu" [formGroup]="formulario" (submit)="testar()">
-        <!--Div relacionada ao campo nome-->
-        <div class="divi" >
-            <input type="text" name="nome" class="caixa" placeholder="nome" formControlName="nome" autofocus>
-            <div>
-                <small *ngIf="formulario.get('nome').errors?.required; then verdadeiro else falso"></small>
-                <ng-template #verdadeiro>Esse campo é obrigatório</ng-template>
-                <ng-template #falso></ng-template>
-                <small *ngIf="">O nome precisa ter mais de 4 caracteres</small>
-                <small *ngIf="">O nome precisa ter menos de 30 caracteres</small>
+    <form [formGroup]="formOrcamento" (ngSubmit)="contactForm()" class="formu">
+        <div class="form-group divi">
+            <!--<label for="email">Seu nome:</label>-->
+            <input formControlName="nome" required type="text" class="form-control caixa" name="nome" placeholder="Nome">
+            <div *ngIf="nome.invalid && (nome.dirty || nome.touched)">
+                <small *ngIf="nome.errors.required">Este campo é obrigatório</small>
+                <small *ngIf="nome.errors.minlength">O nome precisa ter mais de 4 caracteres</small>
+                <small *ngIf="nome.errors.maxlength">O nome precisa ter menos de 30 caracteres</small>
+                <small *ngIf="nome.errors.pattern">Pattern</small>
             </div>
-            <small *ngIf=""> ✔️ </small>
+            <small *ngIf="nome.valid"> ✔️ </small>
         </div>
-        <!--Div relacionada ao campo email-->
-        <div class="divi">
-            <input type="email" name="email" class="caixa" placeholder="email@email.com" formControlName="email">
-            <div>
-                <small *ngIf="formulario.get('email').errors?.required; then verdadeiro else falso"></small>
-                <ng-template #verdadeiro>Esse campo é obrigatório</ng-template>
-                <ng-template #falso></ng-template>
-                <small *ngIf="">Email inválido</small>
+        <div class="form-group divi">
+            <!--<label for="email">Seu e-mail:</label>-->
+            <input formControlName="email" required type="email" class="form-control caixa" name="email"
+                placeholder="nome@exemplo.com">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                <small *ngIf="email.errors.required">Este campo é obrigatório</small>
+                <small *ngIf="email.errors.email">Email inválido</small>
             </div>
-            <small *ngIf=""> ✔️ </small>
+            <small *ngIf="email.valid"> ✔️ </small>
         </div>
-        <!--Div relacionada ao campo serviço-->
-        <div class="divi">
-            <select name="servico" class="caixa">
-                <option *ngFor="let ser of servicos">{{ser}}</option>
+        <div class="form-group divi">
+            <!--<label for="servico">Selecione o serviço desejado:</label>-->
+            <select formControlName="servico" required class="form-control caixa" name="servico">
+                <option value="" selected style="display: none">Selecione uma opção..</option>
+                <option *ngFor='let s of servicos'>{{s}}</option>
             </select>
-            <!--<div>
-                <small>Este campo é obrigatório</small>
+            <div *ngIf="servico.invalid && (servico.dirty || servico.touched)">
+                <small *ngIf="servico.errors.required">Este campo é obrigatório</small>
             </div>
-            <small> ✔️ </small>-->
+            <small *ngIf="servico.valid"> ✔️ </small>
         </div>
-        <!--Div relacionada ao campo descrição-->
-        <div class="divi">
-            <textarea class="caixa" name="descricao" rows="3" placeholder="Escveva uma breve descrição do que precisa" formControlName="cxMsg"></textarea>
-            <div>
-                <small *ngIf="formulario.get('cxMsg').errors?.required; then verdadeiro else falso"></small>
-                <ng-template #verdadeiro>Esse campo é obrigatório</ng-template>
-                <ng-template #falso></ng-template>
+        <div class="form-group divi">
+            <!--<label for="descricao">Descrição:</label>-->
+            <textarea required formControlName="descricao" class="form-control caixa" minlength="10" maxlength="250"
+                name="descricao" rows="3" placeholder="Dê mais detalhes sobre o serviço que deseja.."></textarea>
+            <div *ngIf="descricao.invalid && (descricao.dirty || descricao.touched)">
+                <small *ngIf="descricao.errors.required">Este campo é obrigatório</small>
             </div>
-            <small *ngIf=""> ✔️ </small>
+            <small *ngIf="descricao.valid"> ✔️ </small>
         </div>
-        <!--Div relacionada ao campo botão-->
-        <div>
-            <button class="btn botao" [disabled]="formulario.invalid" >Enviar</button>
+        <div class="form-group">
+            <button  class="btn botao" type="submit" [disabled]="formOrcamento.invalid">Enviar</button>
         </div>
     </form>
 </div>
-
