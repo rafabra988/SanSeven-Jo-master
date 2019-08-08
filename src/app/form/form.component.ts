@@ -51,6 +51,6 @@ export class FormComponent {
   };
 
   testar() {
-    console.log(this.formOrcamento.value.nome);
+    console.log(this.formOrcamento.value);
   };
 }

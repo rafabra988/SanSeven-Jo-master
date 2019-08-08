@@ -1,6 +1,6 @@
 <header></header>
-<h2>Solicite seu orçamento</h2>
 <div class="rafael">
+    <h2 class="titulo">Solicite seu orçamento</h2>
     <form [formGroup]="formOrcamento" (ngSubmit)="contactForm()" class="formu">
         <div class="form-group divi">
             <!--<label for="email">Seu nome:</label>-->
@@ -44,7 +44,7 @@
             <small *ngIf="descricao.valid"> ✔️ </small>
         </div>
         <div class="form-group">
-            <button  class="btn botao" type="submit" [disabled]="formOrcamento.invalid">Enviar</button>
+            <button  class="btn botao" type="submit" (click)="testar()" [disabled]="formOrcamento.invalid">Enviar</button>
         </div>
     </form>
 </div>

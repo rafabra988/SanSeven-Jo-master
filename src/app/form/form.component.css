@@ -1,29 +1,38 @@
 header {
     width: 100%;
-    height: 20vh;
-    background: url(https://wallpaper.wiki/wp-content/uploads/2017/05/wallpaper.wiki-Beautiful-Full-HD-Wallpaper-Download-Free-PIC-WPE0010098.jpg) no-repeat 50% 50%;
-    background-size: cover;   
+    height: 120vh;
+    background: url("https://www.upsa.edu.gh/src/wp-content/uploads/2017/02/88_III_2560_1600.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    filter:blur(5px);
 }
 .rafael{
-    margin: 0 auto;
-    margin-top: 1%;
-    width: 20%;
+    position: absolute;
+    background: white;
+    top: 13%;
+    left: 30%;
+    z-index: 1; 
+    width: 38%;
     padding: 13px;
-    border: 2px solid black;
+    border: 2px  black;
+    -webkit-box-shadow: -1px 3px 19px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 19px 9px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 19px 9px rgba(0,0,0,0.75);
 }
 .principal{
     text-align: center;
 }
 .formu{
     margin: 0 auto;
-    /*margin-right: auto;*/
 }
 h2{
     text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: rgba(18, 52, 104, 1);
 }
 .divi{
     position: relative;
-    margin-left: 15.17%;
+    margin-left: 1%;
     margin-bottom: 12%;
 }
 .botao{
@@ -32,8 +41,6 @@ h2{
     color: white;
     margin-left: 15%;
     width: 65%;
-    border-radius: 55%;
-    
 }
 .botao:hover{
     background-color: rgba(18, 52, 104, 1);
