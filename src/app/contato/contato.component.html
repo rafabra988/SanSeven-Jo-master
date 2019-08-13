@@ -6,74 +6,62 @@
         <div class="col-sl-12 col-md-8">
             <fieldset>
                 <h2 class="test">Preencha esse Formulário</h2>
-                <form>
+                <form [formGroup]="formulario">
                     <div class="form-group">
                         <div class="form-group">
-                            <label for="inputnome">Nome:</label>
-                            <input type="text" class="form-control" id="inputnome" placeholder="Nome">
+                            <label for="inputnome">Nome:</label><small *ngIf="nome.valid"> ✔️ </small>
+                            <input type="text" formControlName="nome" class="form-control" id="inputnome" placeholder="Nome">
+                            <div *ngIf="nome.invalid  && (nome.dirty || nome.touched)">
+                                <small *ngIf="nome.errors.required">Este campo é obrigatório</small>
+                                <small *ngIf="nome.errors.minlength">O nome precisa ter mais de 4 caracteres</small>
+                                <small *ngIf="nome.errors.maxlength">O nome precisa ter menos de 30 caracteres</small>
+                                <small *ngIf="nome.errors.pattern">Pattern</small>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail4">Email:</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <label for="inputEmail4">Email:</label><small *ngIf="email.valid"> ✔️ </small>
+                            <input type="email"formControlName="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <div *ngIf="email.invalid  && (email.dirty || email.touched)">
+                                <small *ngIf="email.errors.required">Este campo é obrigatório</small>
+                                <small *ngIf="email.errors.email">Email inválido</small>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="inputState">Estado:</label>
                             <select id="inputState" class="form-control">
-                                <option selected>Acre</option>
-                                <option>Alagoas</option>
-                                <option>Amapá</option>
-                                <option>Amazonas</option>
-                                <option>Bahia</option>
-                                <option>Ceará</option>
-                                <option>Distrito Federal</option>
-                                <option>Espírito Santo</option>
-                                <option>Goiás</option>
-                                <option>Maranhão</option>
-                                <option>Mato Grosso</option>
-                                <option>Mato Grosso do Sul</option>
-                                <option>Minas Gerais</option>
-                                <option>Pará</option>
-                                <option>Paraíba</option>
-                                <option>Paraná</option>
-                                <option>Pernambuco</option>
-                                <option>Piauí</option>
-                                <option>Rio de Janeiro</option>
-                                <option>Rio Grande do Norte</option>
-                                <option>Rio Grande do Sul</option>
-                                <option>Rondônia</option>
-                                <option>Roraima</option>
-                                <option>Santa Catarina</option>
-                                <option>São Paulo</option>
-                                <option>Sergipe</option>
-                                <option>Tocantis</option>
+                                <option *ngFor="let est of estados">{{est}}</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="inputCelular">Celular:</label>
-                            <input type="text" class="form-control" id="inputCelular" placeholder="Informe seu celular">
+                            <label for="inputCelular">Celular:</label><small *ngIf="celular.valid"> ✔️ </small>
+                            <input type="text" formControlName="celular" class="form-control" id="inputCelular" placeholder="Informe seu celular">
+                            <div *ngIf="celular.invalid  && (celular.dirty || celular.touched)">
+                                <small *ngIf="celular.errors.required">Este campo é obrigatório</small>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea type="text" name="mensagem" id="mensagem" required class="form-control" placeholder="Escreva aqui sua mensagem"></textarea>
+                        <label for="mensagem">Mensagem:</label><small *ngIf="mensagem.valid"> ✔️ </small>
+                        <textarea type="text" formControlName="mensagem" name="mensagem" id="mensagem" required class="form-control" placeholder="Escreva aqui sua mensagem"></textarea>
+                        <div *ngIf="mensagem.invalid  && (mensagem.dirty || mensagem.touched)">
+                            <small *ngIf="mensagem.errors.required">Este campo é obrigatório</small>
+                        </div>
                     </div>
-                    <div class="form-group col-md-2">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    <div class="form-group">
+                        <button type="submit" class="btn botao" [disabled]="formulario.invalid">Enviar</button>
                     </div>
                 </form>
             </fieldset>
         </div >
         <div class="apre col-sl-12 col-md-4">
-            <h2>Entre em Contato Conosco</h2>
-            
-            <form> 
+            <h2>Entre em Contato Conosco</h2>    
+            <div> 
                 Email: conato.sansenven@gmail.com
                 <br>
                 <br>Telefone: 97503-8171
                 <br>
                 <br>
-                
-            </form>
+            </div>
         </div>
     </div>
 </div>

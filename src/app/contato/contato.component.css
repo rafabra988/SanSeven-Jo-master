@@ -17,8 +17,17 @@ fieldset{
 }
 
 h2{
-    margin: 0 auto;
-    margin-top: 20%;
+    text-align: center;
+    margin-top: 5%;
     margin-bottom: 5%;
+    color: rgba(18, 52, 104, 1);
+}
+
+.botao{
+    outline: none;
+    background-color: rgba(129, 188, 186, 1);
+    color: white;
+    margin-left: 15%;
+    width: 65%;
 }
 
