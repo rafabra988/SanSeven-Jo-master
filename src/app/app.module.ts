@@ -10,12 +10,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormModule } from './form/form.module';
+import { PortifolioComponent } from './portifolio/portifolio.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { DepoimentoComponent } from './depoimento/depoimento.component';
+import { ServicoComponent } from './servico/servico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContatoComponent
+    ContatoComponent,
+    PortifolioComponent,
+    NotfoundComponent,
+    DepoimentoComponent,
+    ServicoComponent
   ],
   imports: [
     BrowserModule,

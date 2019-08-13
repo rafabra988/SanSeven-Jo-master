@@ -1,0 +1,50 @@
+header {
+    width: 100%;
+    height: 20vh;
+    background: url("https://www.upsa.edu.gh/src/wp-content/uploads/2017/02/88_III_2560_1600.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    margin-bottom: 3%;
+}
+
+.baixo{
+    margin-bottom: 5%;
+}
+
+.section1{
+    display:flex;
+    height: 100vh;
+   background-color:blue;
+}
+.centralize{
+    margin: auto;
+    text-align: center;
+}
+
+.imagemProjeto{
+    width: 30vh;
+    height: 30vh;
+    padding-left: 15px;
+}
+.section2{
+    display: flex;
+    height: 33vh;
+    background-color: white;
+
+}
+.section3{
+    display: flex;
+    height: 33vh;
+    background-color: #e5e6ea;
+
+}
+.botao{
+    background-color: aqua;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+ul{
+    width: 60%;
+}
