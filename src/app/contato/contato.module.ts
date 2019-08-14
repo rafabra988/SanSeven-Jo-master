@@ -12,9 +12,7 @@ import { AppModule } from '../app.module';
   imports: [
     CommonModule,
     BrowserModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule
+    HttpClientModule
  ],
  providers:[],
  exports:[ContatoComponent]

@@ -190,3 +190,89 @@ span{
 .pcardg{
     text-align: justify;
 }
+
+.divisaoh{
+    height: 50vh;
+    background: url('https://www.upsa.edu.gh/src/wp-content/uploads/2017/02/88_III_2560_1600.jpg') no-repeat 50% 50%;
+}
+
+.qsomos{
+    height: 178vh;
+    
+}
+
+.sobre1{
+    z-index:2;
+    position: absolute;
+    height: 65%;
+    width: 60%;
+    margin-top: 5%;
+    margin-left: 5%;
+    -webkit-box-shadow: -13px 17px 8px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: -13px 17px 8px -5px rgba(0,0,0,0.75);
+    box-shadow: -13px 17px 8px -5px rgba(0,0,0,0.75);
+    background: rgba(255, 255, 255,1);
+}
+
+.titulo2{
+    margin-left: 5%;
+}
+
+.texto2{
+    margin-right: 5%;
+}
+
+.barrinha4,
+.barrinha3{
+    left: 4%;
+    top: 23%;
+    width: 34%;
+    height: 1%;
+}
+
+.barrinha3{
+    width: 49%;
+}
+
+.sobre2{
+    z-index:2;
+    position: absolute;
+    height: 65%;
+    width: 55%;
+    margin-top: 45%;
+    margin-left: 41%;
+    -webkit-box-shadow: 13px 14px 8px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 14px 8px -5px rgba(0,0,0,0.75);
+    box-shadow: 13px 14px 8px -5px rgba(0,0,0,0.75);
+    background: rgba(255, 255, 255,1);
+}
+
+.test3{
+    z-index:1;
+    position: absolute;
+    left: 10%;
+    top: 340%;
+    width: 85%;
+    height: 120%;
+    background: rgba(246, 251, 251, 1);
+}
+
+.testbaixo{
+    z-index:2;
+    position: absolute;
+    top: 410%;
+    width: 30%;
+    height: 70%;
+    background: url("https://images.unsplash.com/photo-1463281797137-8e3449cd6019?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80") no-repeat 50% 50%;
+
+}
+.testbaixo2{
+    z-index:2;
+    position: absolute;
+    left: 70%;
+    top: 315%;
+    width: 30%;
+    height: 60%;
+    background: url("https://images.unsplash.com/photo-1463281797137-8e3449cd6019?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80") no-repeat 50% 50%;
+
+}
