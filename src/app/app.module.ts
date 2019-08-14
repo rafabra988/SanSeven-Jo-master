@@ -28,7 +28,10 @@ import { ServicoComponent } from './servico/servico.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormModule
+    FormModule,
+    HttpClientModule,
+    FormModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
