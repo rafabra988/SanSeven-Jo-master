@@ -34,10 +34,10 @@ header {
 .section3{
     margin-bottom: 5%;
 }
-/*.sobre:hover{
+.sobre:hover{
     transition: 500ms;
     opacity: 0.5;
-}*/
+}
 #sub{
     width: 35%;
     border-bottom: 2px solid white;
