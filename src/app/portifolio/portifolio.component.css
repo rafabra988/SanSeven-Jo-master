@@ -6,6 +6,7 @@ header {
     margin-bottom: 1.33%;
 }
 
+
 .imagemProjeto{
     padding: 2.33%;
     width: 50vh;
@@ -29,6 +30,10 @@ header {
     color: azure;
     background-color: rgba(0, 49, 122, 1);
 }
+.section2,
+.section3{
+    margin-bottom: 5%;
+}
 /*.sobre:hover{
     transition: 500ms;
     opacity: 0.5;
@@ -44,4 +49,21 @@ header {
 .titulo{
     text-align: center;
     margin-bottom: 2.33%; 
+}
+
+@media(max-width: 1024px){
+    .section2,
+    .section3{
+        width: 65%;
+        height: 35vh;
+    }
+
+    .imagemProjeto{
+        margin-top: 5%;
+    }
+    
+    #sub{
+        width: 80%;
+        margin-bottom: 10%;
+    }
 }
