@@ -72,7 +72,8 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: rgba(0, 88, 219, 0.94);
+    font-weight: 700;
     font-size: 16px;
     
 }
